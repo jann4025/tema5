@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        let rigtigeSvar = 0;
+
+        if (confirm("Vil du starte quizen?")) {
+            spg1();
+        }
+
+
+        function spg1() {
+            if (confirm("Alert spørger om noget i en popup")) {
+                alert("Forkert, Alert skriver noget i en popup ligesom det du ser nu");
+                spg2();
+            } else {
+                alert("Rigtigt, Alert skriver noget i en popup ligesom det du ser nu");
+                rigtigeSvar++;
+                spg2();
+            }
+        }
+
+        function spg2() {
+            if (confirm("window.console.log skriver noget i brwoserens console")) {
+                alert("Rigtigt, window.console.log skriver noget i brwoserens console");
+                rigtigeSvar++;
+                spg3();
+            } else {
+                alert("Forkert, window.console.log skriver noget i brwoserens console");
+                spg3();
+            }
+        }
+
+        function spg3() {
+            if (confirm("window.confirm beder om ja eller nej til et spørgsmål (i en popup")) {
+                alert("Rigtigt, window.confirm beder om ja eller nej til et spørgsmål (i en popup)");
+                rigtigeSvar++;
+                spg4();
+            } else {
+                alert("Forkert, window.confirm beder om ja eller nej til et spørgsmål (i en popup)");
+                spg4();
+            }
+        }
+
+
+        function spg4() {
+            if (confirm("Konstanter er en værdi man ændre i undervejs")) {
+                alert("Forkert, Konstanter er en værdi man ikke har brug for at ændre undervejs");
+
+                spg5();
+            } else {
+                alert("Rigtigt, Konstanter er en værdi man ikke har brug for at ændre undervejs");
+                rigtigeSvar++;
+                spg5();
+            }
+        }
+
+        function spg5() {
+            if (confirm("window.prompt() spørger om noget i en popup")) {
+                alert("Rigtigt, window.prompt() spørger om noget i en popup");
+                rigtigeSvar++;
+                resultat();
+            } else {
+                alert("Forkert, window.prompt() spørger om noget i en popup");
+                resultat();
+            }
+        }
+
+        console.log(rigtigeSvar);
+
+        function resultat() {
+            alert(`Du har svaret rigtigt på ${rigtigeSvar} ud af 5 mulige`)
+        }
+    </script>
+</body>
+
+</html>

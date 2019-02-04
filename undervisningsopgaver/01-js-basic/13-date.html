@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        let DinAlder = prompt("Angiv din alder");
+        let DinDatesAlder = prompt("Angiv din dates alder");
+        let DinAlderRegnet = DinAlder / 2 + 7;
+
+        if (DinAlder < 15 || DinDatesAlder < 15) {
+            alert("Der er sket en fejl! Din og din dates alder skal være over 15 år");
+            stop();
+        }
+
+        if (DinAlderRegnet == DinDatesAlder || DinAlderRegnet > DinDatesAlder) {
+            alert("Dig og din date overholder reglen `half your age plus seven`");
+        }
+    </script>
+</body>
+</html>
