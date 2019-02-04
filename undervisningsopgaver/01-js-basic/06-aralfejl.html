@@ -13,16 +13,33 @@
         udRegner();
 
         function udRegner() {
+
             let længde = prompt("Hvad er længden?");
+            if (erTalLængde = isNaN(længde) || længde == "") {
+                fejlLængde();
+            }
+
+            function fejlLængde() {
+                alert("Længden skal udfyldes og må kun indholde tal");
+                udRegner();
+
+            }
+
             let bredde = prompt("Hvad er breden?");
+            if (erTalBredde = isNaN(bredde) || bredde == "") {
+                fejlBredde();
+            }
+
+            function fejlBredde() {
+                alert("Bredden skal udfyldes og må kun indholde tal");
+                udRegner();
+            }
             let areal = længde * bredde;
             let resultat = alert(`Længde: ${længde} meter, bredde: ${bredde} meter, Areal: ${areal} `)
-
             if (confirm("Vil du starte forfra?")) {
                 udRegner();
             }
         }
-
     </script>
 </body>
 
