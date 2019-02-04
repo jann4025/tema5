@@ -10,17 +10,13 @@
 
 <body>
     <script>
-        udRegner();
+        let længde = prompt("Hvad er længden?");
+        let bredde = prompt("Hvad er breden?");
+        let areal = længde * bredde;
+        let resultat = alert(`Længde: ${længde} meter, bredde: ${bredde} meter, Areal: ${areal} `)
 
-        function udRegner() {
-            let længde = prompt("Hvad er længden?");
-            let bredde = prompt("Hvad er breden?");
-            let areal = længde * bredde;
-            let resultat = alert(`Længde: ${længde} meter, bredde: ${bredde} meter, Areal: ${areal} `)
+        if (confirm("Vil du starte forfra?")) {
 
-            if (confirm("Vil du starte forfra?")) {
-                udRegner();
-            }
         }
     </script>
 </body>
