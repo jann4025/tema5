@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        udRegner();
+
+        function udRegner() {
+            let længde = prompt("Hvad er længden?");
+            let bredde = prompt("Hvad er breden?");
+            let areal = længde * bredde;
+            let resultat = alert(`Længde: ${længde} meter, bredde: ${bredde} meter, Areal: ${areal} `)
+
+            if (confirm("Vil du starte forfra?")) {
+                udRegner();
+            }
+        }
+    </script>
+</body>
+
+</html>
