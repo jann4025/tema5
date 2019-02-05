@@ -10,7 +10,7 @@
         #firkant {
             height: 200px;
             width: 200px;
-            line-height: 100px;
+            line-height: 300px;
             text-align: center;
             background-color: green;
         }
@@ -18,7 +18,7 @@
         #cirkel {
             height: 200px;
             width: 200px;
-            line-height: 200px;
+            line-height: 300px;
             text-align: center;
             border-radius: 50%;
             background-color: red;
@@ -41,9 +41,13 @@
     <script>
         let firkanttxt = document.querySelector("#firkant")
         let cirkeltxt = document.querySelector("#cirkel")
+        let img = document.createElement("img");
+        img.src = "http://helf-kea.dk/test/fox.png";
+
 
         firkanttxt.innerHTML = "<img src= 'http://helf-kea.dk/test/frog.png'/>"
         cirkeltxt.innerHTML = "<img src= 'http://helf-kea.dk/test/gris.png'/>"
+        cirkeltxt.appendChild(img);
     </script>
 </body>
 

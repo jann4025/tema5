@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="">
 
@@ -39,11 +38,15 @@
 
 
     <script>
-        let firkanttxt = document.querySelector("#firkant")
-        let cirkeltxt = document.querySelector("#cirkel")
+        document.addEventListener("DOMContentLoaded", start)
 
-        firkanttxt.innerHTML = "<img src= 'http://helf-kea.dk/test/frog.png'/>"
-        cirkeltxt.innerHTML = "<img src= 'http://helf-kea.dk/test/gris.png'/>"
+        function start() {
+            console.log("Loaded")
+            let firkanttxt = document.querySelector("#firkant")
+            let cirkeltxt = document.querySelector("#cirkel")
+            firkanttxt.innerHTML = "<img src= 'http://helf-kea.dk/test/frog.png'/>"
+            cirkeltxt.innerHTML = "<img src= 'http://helf-kea.dk/test/gris.png'/>"
+        }
     </script>
 </body>
 
