@@ -9,7 +9,7 @@
         #firkant {
             height: 200px;
             width: 200px;
-            line-height: 100px;
+            line-height: 300px;
             text-align: center;
             background-color: green;
         }
@@ -17,7 +17,7 @@
         #cirkel {
             height: 200px;
             width: 200px;
-            line-height: 200px;
+            line-height: 300px;
             text-align: center;
             border-radius: 50%;
             background-color: red;
@@ -39,13 +39,22 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", start)
+        let firkanttxt = document.querySelector("#firkant")
+        let cirkeltxt = document.querySelector("#cirkel")
 
         function start() {
             console.log("Loaded")
-            let firkanttxt = document.querySelector("#firkant")
-            let cirkeltxt = document.querySelector("#cirkel")
             firkanttxt.innerHTML = "<img src= 'http://helf-kea.dk/test/frog.png'/>"
             cirkeltxt.innerHTML = "<img src= 'http://helf-kea.dk/test/gris.png'/>"
+
+            document.querySelector("#firkant").addEventListener("click", rykOp);
+            document.querySelector("#cirkel").style = "position:static;"
+        }
+
+        function rykOp() {
+            document.querySelector("#firkant").removeEventListener("click", rykOp);
+            document.querySelector("#cirkel").addEventListener("click", start);
+            document.querySelector("#cirkel").style = "position:absolute; top:0;"
 
         }
     </script>
