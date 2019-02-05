@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #firkant {
+            height: 200px;
+            width: 200px;
+            line-height: 100px;
+            text-align: center;
+            background-color: green;
+        }
+
+        #cirkel {
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="firkant">
+
+    </div>
+
+    <div id="cirkel">
+
+    </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start)
+        let firkanttxt = document.querySelector("#firkant")
+        let cirkeltxt = document.querySelector("#cirkel")
+
+        function start() {
+            console.log("Loaded")
+            firkanttxt.innerHTML = "<img src= 'http://helf-kea.dk/test/frog.png'/>"
+            cirkeltxt.innerHTML = "<img src= 'http://helf-kea.dk/test/gris.png'/>"
+
+            document.querySelector("#firkant").addEventListener("click", bytPlads);
+        }
+
+        function bytPlads() {
+            document.querySelector("#firkant").removeEventListener("click", bytPlads);
+            firkanttxt.innerHTML = "<img src= 'http://helf-kea.dk/test/gris.png'/>"
+            cirkeltxt.innerHTML = "<img src= 'http://helf-kea.dk/test/frog.png'/>"
+            document.querySelector("#firkant").addEventListener("click", start);
+            document.querySelector("#cirkel").addEventListener("click", stop);
+        }
+
+        function stop() {
+            document.querySelector("#firkant").removeEventListener("click", bytPlads);
+            document.querySelector("#firkant").removeEventListener("click", start);
+        }
+    </script>
+</body>
+
+</html>
