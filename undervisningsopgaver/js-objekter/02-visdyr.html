@@ -11,9 +11,9 @@
 <body>
 
     <div id="dyr">
-        <div id="navn">Dyr: </div>
-        <div id="type">Type: </div>
-        <div id="levested">Levested: </div>
+        <span id="navn">Dyr: </span>
+        <span id="type">Type: </span>
+        <span id="levested">Levested: </span> <br>
         <img src="" alt="">
     </div>
 
@@ -22,8 +22,9 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", start);
+
         function start() {
-console.log("start");
+            console.log("start");
             let gris = {
                 "navn": "gris",
                 "billede": "http://helf-kea.dk/test/gris.png",
