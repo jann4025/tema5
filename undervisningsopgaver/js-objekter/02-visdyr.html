@@ -10,11 +10,7 @@
 
 <body>
 
-    <div id="dyr">
-        <span id="navn">Dyr: </span>
-        <span id="type">Type: </span>
-        <span id="levested">Levested: </span> <br>
-        <img src="" alt="">
+    <div>
     </div>
 
 
@@ -36,10 +32,7 @@
             let type = gris.type;
             let leveSted = gris.leveSted;
 
-            document.querySelector("#navn").innerHTML += navn;
-            document.querySelector("img").src = "http://helf-kea.dk/test/gris.png";
-            document.querySelector("#type").innerHTML += type;
-            document.querySelector("#levested").innerHTML += leveSted;
+            document.querySelector("div").innerHTML = `Dyr: ${navn}, Type ${type}, Levested ${leveSted} <br> <img src="http://helf-kea.dk/test/gris.png"/>`;
         }
     </script>
 </body>
