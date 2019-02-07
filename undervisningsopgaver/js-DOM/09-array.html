@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>js-oevelse-1</title>
+    <style>
+        body {
+            color: burlywood;
+        }
+
+        #display {
+            width: 20vw;
+            border: 1px solid silver;
+            margin: 7vw;
+            padding: 1vw;
+        }
+
+        /*********************/
+
+    </style>
+
+</head>
+
+<body>
+    <div id="display"></div>
+
+    <script>
+        let tracks = ["Aldrig", "I know what you want", "Empire state", "LOST", "Hurt", "Old Beat", "05.wav", "Sneakers", "Blue one", "Night one"];
+
+        tracks.forEach(HvertTrack => {
+            console.log(HvertTrack);
+            document.querySelector("#display").innerHTML += HvertTrack + "<br>";
+        });
+
+    </script>
+</body>
+
+</html>

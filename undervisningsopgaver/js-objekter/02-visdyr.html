@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <div id="dyr">
+        <div id="navn">Dyr: </div>
+        <div id="type">Type: </div>
+        <div id="levested">Levested: </div>
+        <img src="" alt="">
+    </div>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+        function start() {
+console.log("start");
+            let gris = {
+                "navn": "gris",
+                "billede": "http://helf-kea.dk/test/gris.png",
+                "type": "Pattedyr",
+                "leveSted": "Svinefarme"
+            };
+            let navn = gris.navn;
+            let billede = gris.billede;
+            let type = gris.type;
+            let leveSted = gris.leveSted;
+
+            document.querySelector("#navn").innerHTML += navn;
+            document.querySelector("img").src = "http://helf-kea.dk/test/gris.png";
+            document.querySelector("#type").innerHTML += type;
+            document.querySelector("#levested").innerHTML += leveSted;
+        }
+    </script>
+</body>
+
+</html>
