@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="">
+
+    <style>
+        .vis {
+            border: 1px solid black;
+            width: 30%;
+            margin: 1vw;
+            padding: 1vw;
+        }
+    </style>
 </head>
 
 <body>
@@ -58,10 +67,19 @@
 
             ];
             console.log(dyr);
-            dyr.forEach(dyr => {
-                document.querySelector("#dyr").innerHTML += `${dyr.navn}, ${dyr.type}, fra ${dyr.leveSted} <br>`;
-            });
 
+            dyr.forEach(dyr => {
+                document.querySelector("#dyr").innerHTML +=
+
+
+                    `<div class="vis">
+        <h2>${dyr.navn}</h2>
+<img src="${dyr.billede}"</p>
+<p>Type: ${dyr.type}</p>
+<p>Levested: ${dyr.leveSted}</p>
+        
+        </div>`
+            });
 
 
         }
