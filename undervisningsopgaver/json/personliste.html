@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,900" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        #personer {
+            display: grid;
+            grid-template-columns: auto auto;
+            margin: 0 auto;
+
+        }
+
+        .vis {
+            -webkit-font-smoothing: antialiased;
+            background-color: whitesmoke;
+            width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 1vw;
+            margin: 1vw auto;
+            border-radius: 1%;
+            box-shadow: rgba(0, 0, 0, .15) 0 1rem 2.8rem 0;
+            border-radius: .8rem;
+
+
+        }
+
+        .center {
+            text-align: center;
+            font-size: 200%;
+            font-weight: 900;
+        }
+
+
+        .vis img {
+            width: 80%;
+            border-radius: 1%;
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="center">
+        <h1>Personliste</h1>
+    </div>
+
+    <div id="personer">
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            let personer = [];
+
+
+            async function getJson() {
+                let jsonData = await fetch("https://mandalskeawebspace.dk/claude_php/clean_up_spreadsheet.php?id=1OLlD_GRoz71piHvnW306omRAyHS7vtLOILQt-K0YF_c");
+                personer = await jsonData.json();
+                visPersoner();
+            }
+
+            console.log(personer);
+
+            function visPersoner() {
+
+                personer.forEach(personer => {
+                    document.querySelector("#personer").innerHTML +=
+
+                        `<div class="vis">
+<div>
+       
+<img src="${personer.billede}"</p>
+</div>
+<div>
+ <h2>${personer.navn}</h2>
+<p><b>Github:</b> ${personer.github}</p>
+<p><b>Alder:</b> ${personer.alder}</p>
+<p><b>Køn:</b> ${personer.køn}</p>
+<p><b>Email:</b> ${personer.email}</p>
+<p><b>Hold:</b> ${personer.hold}</p>
+</div>
+        
+        </div>`
+                });
+
+
+            }
+
+            getJson();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        .vis {
+            border: 1px solid black;
+            margin: 1vw;
+            padding: 1vw;
+            text-align: left;
+        }
+
+        #dyr {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="dyr">
+
+
+
+    </div>
+
+
+
+
+    <script>
+        let dyr = [];
+        document.addEventListener("DOMContentLoaded", start);
+
+
+
+
+        function start() {
+            console.log("start");
+
+
+            console.log(dyr);
+
+            async function getJson() {
+                let jsonData = await fetch("dyr.json");
+                dyr = await jsonData.json();
+                visDyr();
+            }
+
+            function visDyr() {
+                dyr.forEach(dyr => {
+                    document.querySelector("#dyr").innerHTML +=
+
+
+                        `<div class="vis">
+        <h2>${dyr.navn}</h2>
+<img src="${dyr.billede}"</p>
+<p>Type: ${dyr.type}</p>
+<p>Levested: ${dyr.leveSted}</p>
+        
+        </div>`
+                });
+            }
+            getJson();
+        }
+    </script>
+</body>
+
+</html>
