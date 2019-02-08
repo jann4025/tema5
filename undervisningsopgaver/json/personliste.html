@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,6 +46,11 @@
         .vis img {
             width: 80%;
             border-radius: 1%;
+        }
+
+        a {
+            color: black;
+
         }
     </style>
 
@@ -92,7 +98,8 @@
 </div>
 <div>
  <h2>${personer.navn}</h2>
-<p><b>Github:</b> ${personer.github}</p>
+<a href="https://github.com/${personer.github}"
+target_blank><b>Github</b></a>
 <p><b>Alder:</b> ${personer.alder}</p>
 <p><b>Køn:</b> ${personer.køn}</p>
 <p><b>Email:</b> ${personer.email}</p>
@@ -109,4 +116,5 @@
         }
     </script>
 </body>
+
 </html>
